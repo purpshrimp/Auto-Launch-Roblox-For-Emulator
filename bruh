@@ -1,0 +1,31 @@
+from sikuli import *
+
+
+target1 = Pattern() #iconofroblox
+target2 = Pattern() #iconofGpo
+target3 = Pattern() #greenbutton(play)
+
+def sequence_1(): 
+    trg = exists(target1)
+    if trg:
+        click(trg)
+        wait(55)
+        
+    trg = exists(target2)
+    if trg:
+        click(trg)
+        wait(15)       
+        
+    trg = exists(target3)
+    if trg:
+        click(trg)
+        wait(10)   
+
+def sequence_00():
+    wait(3)
+    trg = exists(target1)
+    if trg:
+        sequence_1()
+       
+while True:
+    sequence_00()
